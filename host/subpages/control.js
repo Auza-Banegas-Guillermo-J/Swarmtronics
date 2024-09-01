@@ -2,8 +2,7 @@ const controlPanelElement = document.querySelector(".control-panel");
 const websocketConnectButton = document.getElementById("websocket-connect");
 
 const WEBSOCKET_PORT = 8080;
-const WEBSOCKET_URI = "192.168.1.252";
-const WEBSOCKET_URL = `ws://${WEBSOCKET_URI}:${WEBSOCKET_PORT}`;
+const WEBSOCKET_URL = `ws://${window.location.hostname}:${WEBSOCKET_PORT}`;
 
 const html = String.raw;
 
