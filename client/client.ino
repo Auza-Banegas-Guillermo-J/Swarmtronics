@@ -6,7 +6,7 @@ const char* ssid = "MegaBurger";
 const char* password = "Daly2211";
 
 const char* wsHost = "192.168.1.252";
-const int wsPort = 8080;
+const int wsPort = 8000;
 
 WebSocketsClient webSocket;
 
@@ -27,7 +27,7 @@ void setup() {
     Serial.println("Connecting to WiFi..");
   }
   Serial.println("Connected to WiFi");
-  webSocket.begin(wsHost, wsPort, "/");
+  webSocket.begin(wsHost, wsPort, "/ws");
   webSocket.onEvent(webSocketEvent);
   webSocket.setReconnectInterval(5000);
   pinMode(LED_BUILTIN, OUTPUT); // Using built-in LED for ESP8266
