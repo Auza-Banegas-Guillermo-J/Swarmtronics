@@ -1,8 +1,8 @@
 const controlPanelElement = document.querySelector(".control-panel");
 const websocketConnectButton = document.getElementById("websocket-connect");
 
-const WEBSOCKET_PORT = 8080;
-const WEBSOCKET_URL = `ws://${window.location.hostname}:${WEBSOCKET_PORT}`;
+const WEBSOCKET_PORT = 8000;
+const WEBSOCKET_URL = `ws://${window.location.hostname}:${WEBSOCKET_PORT}/ws`;
 
 const html = String.raw;
 
@@ -32,6 +32,7 @@ const nodeDirections = {
 let socket = null;
 
 function startWebsocket() {
+  console.log(WEBSOCKET_URL);
   socket = new WebSocket(WEBSOCKET_URL);
 
   socket.addEventListener("open", () => {
