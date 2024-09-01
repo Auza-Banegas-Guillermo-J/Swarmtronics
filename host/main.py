@@ -1,5 +1,4 @@
 import os
-import asyncio
 from typing import List
 
 from fastapi import FastAPI, WebSocket
@@ -13,7 +12,7 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 static_dir = os.path.join(current_dir, "static")
 
 
-@ app.websocket("/ws")
+@app.websocket("/ws")
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     clients.append(websocket)
