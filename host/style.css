@@ -1,0 +1,100 @@
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #200b36; /* Dark purple */
+  color: #f9f4f0; /* Light yellow */
+  background-image: url("rsc/cyberpunk_bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Optional to fix image on scrolling */
+  background-size: cover; /* Adjust as needed (refer to Approach 1 or 2 explanation below) */
+}
+
+.main{
+  height: 100%;
+}
+
+/* Fallback for older browsers (Approach 1) */
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (min-resolution: 1dppx) {
+  body {
+    background-size: 100% 100%; /* Fallback size */
+  }
+}
+
+/* Adjust background-size property as needed (Approach 2) */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #4d007a; /* Darker purple */
+}
+
+.video-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 75px; /* Adjust image width as needed */
+  margin-right: 1rem;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navigation li {
+  margin-right: 1rem;
+}
+
+.navigation a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center elements along the main axis */
+  align-items: center; /* Center elements along the cross axis */
+}
+
+.arrow-button {
+  background-color: #4d007a; /* Darker purple from header */
+  color: #f9f4f0; /* Light yellow from text */
+  border: none; /* Remove default border */
+  padding: 1rem; /* Add some padding inside the button */
+  cursor: pointer; /* Indicate clickable behavior */
+  margin: 0.5rem; /* Add some margin between buttons */
+  width: 65px; /* Set width */
+  height: 65px; /* Set height */
+}
+
+.arrow-button:hover {
+  /* Style on hover */
+  background-color: #200b36; /* Darkest purple for hover effect */
+}
+
+.hidden {
+  display: none;
+}
+
+#start-stream{
+  width: 200px;
+}
+
+#websocket-connect{
+  width: 100px;
+}
